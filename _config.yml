@@ -1,7 +1,7 @@
 # --- General options --- #
 
 # Name of website
-title: My website
+title: Harrison's Website
 
 # Short description of your site
 description: A virtual proof that I'm awesome
@@ -41,7 +41,7 @@ avatar: "/img/avatar-icon.png"
 navbar-col: " #00DCFF"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
-page-col: " #3383FF "
+page-col: "#2f3AAB"
 link-col: "#008AFF"
 hover-col: "#0085A1"
 footer-col: "#F5F5F5"
