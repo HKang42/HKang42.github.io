@@ -21,3 +21,10 @@ INSERT PLOT HERE
 The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with dark grey.
 
 As we can see, the vast majority of cases are still confined to mainland China. 
+
+| Rank |     Region     | Confirmed Cases |
+|-----:|:--------------:|----------------:|--:|--:|
+|    1 | Mainland China |           80271 |   |   |
+|    2 |   South Korea  |            5621 |   |   |
+|    3 |      Italy     |            3089 |   |   |
+|    4 |      Iran      |            2922 |   |   |
