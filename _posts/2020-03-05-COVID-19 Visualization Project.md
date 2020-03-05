@@ -20,11 +20,17 @@ INSERT PLOT HERE
 
 The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with dark grey.
 
-As we can see, the vast majority of cases are still confined to mainland China. 
+As we can see, the vast majority of cases are still confined to mainland China. There are some notable bubbles in South Korea, Italy, and Iran. 
 
 | Rank |     Region     | Confirmed Cases |
-|-----:|:--------------:|----------------:|--:|--:|
-|    1 | Mainland China |           80271 |   |   |
-|    2 |   South Korea  |            5621 |   |   |
-|    3 |      Italy     |            3089 |   |   |
-|    4 |      Iran      |            2922 |   |   |
+|-----:|:--------------:|----------------:|
+|    1 | Mainland China |           80271 |
+|    2 |   South Korea  |            5621 |
+|    3 |      Italy     |            3089 |
+|    4 |      Iran      |            2922 |
+|    5 |     Others*    |             706 |
+
+* Others refers to the Diamond Princess Cruise ship.
+
+
+
