@@ -1,3 +1,13 @@
+---
+layout: post
+title: COVID-19 Visualization
+subtitle: Is it time to panic yet?
+gh-repo: daattali/beautiful-jekyll
+gh-badge: [star, fork, follow]
+tags: [test]
+comments: true
+---
+
 Over the past month, news headlines worldwide have been dominated by a single topic, COVID-19. COVID-19 (colloquially called “the Coronavirus”) originated in mainland China where it infected tens of thousands over the course of several weeks. Since then it has spread abroad, appearing in countries like Iran, Italy, and The United States. The virus’ spread has stoked fear and panic around the world, leading many citizens of all countries to wonder if there’s a pandemic brewing in their own backyards. 
 
 This begs the question: how far has the Coronavirus actually spread? And does it pose a serious and immediate threat?
@@ -11,6 +21,3 @@ INSERT PLOT HERE
 The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with dark grey.
 
 As we can see, the vast majority of cases are still confined to mainland China. 
-
-
-
