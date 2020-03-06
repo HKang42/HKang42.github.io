@@ -44,7 +44,7 @@ From the above table, we can see that China dwarfs everyone else as far as numbe
 
 In order to answer that question, I plotted the cumulative total of confirmed cases, recoveries, and deaths both within mainland China and outside of China.
 
-  **<center>Mainland China &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Outside China</center>**
+  **<center>Mainland China &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Outside China &emsp; </center>**
 
 ![COVID_2](/img/COVID_2.jpg){: .center-block :}
 
@@ -57,7 +57,7 @@ The graphs for mainland China show that the virus' spread began to level off aro
 
 Looking at the axis values, it's important to note that the total number of confirmed cases is quite small relative to the total number of cases and the worldwide population. So the curve may look steep, but that's largely due to the fact that going from 10 to 100 cases represents a large increase. But on a population scale of tens of thousands or higher, those numbers are tiny. In order to counteract this effect, let's redo the graph but set the y-axis maximum equal to the total number of cases. 
 
-**<center>Mainland China &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Outside China</center>**
+**<center>Mainland China &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Outside China &emsp; </center>**
 
 ![COVID_3](/img/COVID_3.jpg){: .center-block :}
 
