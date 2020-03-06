@@ -55,9 +55,7 @@ But this interpretation ignores 2 important things. One, it doesn't look at the 
 The graphs for mainland China show that the virus' spread began to level off around 80,000 cases. The number of deaths follorwed a similar trend. While the number of recoveries is still increasing. The reason why the number of cases leveled off can't be 100% determined, but I suspect it's due to China's quarantine efforts. If this is true, and the world also follows quarantine efforts, then we should expect that the worldwide graphs will mirror China's graphs. The only difference would be a time delay since the virus has only just recently spread abroad. But right now, the worldwide graphs don't resemble the china graphs whatsoever. So what gives?
 
 
-Looking at the axis values, it's important to note that the total number of confirmed cases is quite small relative to the total number of cases and the worldwide population. 
-
-What happens if we redo the graph, but set the y-axis maximum equal to the total number of cases?
+Looking at the axis values, it's important to note that the total number of confirmed cases is quite small relative to the total number of cases and the worldwide population. So the curve may look steep, but that's largely due to the fact that going from 10 to 100 cases represents a large increase. But on a population scale of tens of thousands or higher, those numbers are tiny. In order to counteract this effect, let's redo the graph but set the y-axis maximum equal to the total number of cases. 
 
 **<center>Mainland China &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Outside China</center>**
 
@@ -72,3 +70,7 @@ There's one last common question I've left relatively untouched so far: "Will I 
 ![COVID_4.5](/img/COVID_4.5.jpg){: .center-block :}
 
 From here, it should be easy to see that you are far more likely to recover than to die if you were to contract the virus. This is consistent with the 3% fatality rate that has been reported so far. Another factor to consider is the fact that many infected individuals experience mild symptoms or are asymptomatic. These individuals are less likely to be tested and don't experience severe enough symptoms to die from the disease. Thus, it's likely that the true fatality rate is even lower than the one calculated from current data.
+
+
+[Here's a link to the code I used to generate the plots](https://github.com/HKang42/DS-Unit-1-Build/blob/master/COVID_19_Project.ipynb)
+
