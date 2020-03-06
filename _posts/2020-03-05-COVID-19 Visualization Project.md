@@ -41,5 +41,17 @@ In order to answer that question, I plotted the cumulative total of confirmed ca
 
 ![COVID_2](/img/COVID_2.jpg){: .center-block :}
 
-This result may seem startling. The curve for COVID-19 cases outside mainland China looks incredibly steep.
+This result may seem startling. While it looks like China will be fine going forward, the rest of the world is experiencing a rapid increase in the number of cases.
+
+But this interpretation ignores 2 important things. One, it doesn't look at the story the graphs for mainland China portray. Two, it ignores the axis values. 
+
+The graphs for mainland China show that amidst quarantine efforts, the virus' spread began to level off around 80,000 cases. The number of deaths follorwed a similar trend. While the number of recoveries is still increasing. Since COVID-19 only began to spread abroad after it had infected China, we should expect that the worldwide graphs will mirror China's BUT with a time delay. 
+
+Looking at the axis values, it's important to note that the total number of confirmed cases is quite small relative to the total number of cases and the worldwide population. 
+
+What happens if we redo the graph, but set the y-axis maximum equal to the total number of cases?
+
+![COVID_3](/img/COVID_3.jpg){: .center-block :}
+
+As we can see, the graph for cases outside China looks much less extreme. In fact, it looks like the beginning of the graph for China's cases. This is consistent with our statement earlier about the world graph mirroring China's with a time delay.
 
