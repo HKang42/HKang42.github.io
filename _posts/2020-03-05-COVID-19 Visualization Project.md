@@ -19,7 +19,7 @@ Using this data I was able to generate a geo-scatter plot to visualize the curre
 
 ![GeoScatter](/img/a1.png){: .center-block :}
 
-The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with dark grey. In total, there are 79 bubbles. 
+The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with dark grey. 
 
 As we can see, the vast majority of cases are still confined to mainland China. There are some notable bubbles in South Korea, Italy, and Iran. However, most other countries have cases that number only in the low hundreds or lower. But how many cases are we looking at exactly?
 
@@ -34,11 +34,13 @@ As we can see, the vast majority of cases are still confined to mainland China. 
 |    5 |     Others*    |             706 |
 
  
-<font size="2"> \*Others refers to the Diamond Princess Cruise ship.</font>
+<font size="2"> *Others refers to the Diamond Princess Cruise ship.</font>
 
 &nbsp;
 
 From the above table, we can see that China dwarfs everyone else as far as number of cases. There's a steep drop off as we go down the list. The U.S. is number 10 with only 153 cases as of this post. Based on the current number and distribution of COVID-19 cases, it appears that while the virus may pose an imminent threat, the average American is quite unlikely to wake up tomorrow and find himself diagnosed with COVID-19. So readers may rest assured that they don't need to panic yet. However, the above data is merely a snapshot in time and doesn't tell us much about the future. So what does the virus' progress look like over time?
+
+&nbsp;
 
 In order to answer that question, I plotted the cumulative total of confirmed cases, recoveries, and deaths both within mainland China and outside of China.
 
@@ -60,3 +62,8 @@ What happens if we redo the graph, but set the y-axis maximum equal to the total
 
 As we can see, the graph for cases outside China looks much less extreme. In fact, it looks like the beginning of the graph for China's cases. This is consistent with our statement earlier about the world graph mirroring China's with a time delay.
 
+&nbsp;
+
+There's one last common concern I've left relatively untouched so far, the number of deaths. The overall mortality rate based on the data is about GVSDRGAGEREASRFAF
+
+![COVID_4](/img/COVID_4.jpg){: .center-block :}
