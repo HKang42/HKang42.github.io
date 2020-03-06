@@ -17,11 +17,11 @@ To answer this question, I will use the [2019 Novel Coronavirus COVID-19 (2019-n
 
 Using this data I was able to generate a geo-scatter plot to visualize the current geographic spread of COVID-19.
 
-[GeoScatter](/img/a1.png)
+![GeoScatter](/img/a1.png)
 
-The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with dark grey.
+The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with dark grey. In total, there are 79 bubbles. 
 
-As we can see, the vast majority of cases are still confined to mainland China. There are some notable bubbles in South Korea, Italy, and Iran. 
+As we can see, the vast majority of cases are still confined to mainland China. There are some notable bubbles in South Korea, Italy, and Iran. However, most other countries have cases that number only in the low hundreds or lower. 
 
 | Rank |     Region     | Confirmed Cases |
 |-----:|:--------------:|----------------:|
@@ -31,7 +31,7 @@ As we can see, the vast majority of cases are still confined to mainland China. 
 |    4 |      Iran      |            2922 |
 |    5 |     Others*    |             706 |
 
-* Others refers to the Diamond Princess Cruise ship.
+ \*Others refers to the Diamond Princess Cruise ship.
 
 
 
