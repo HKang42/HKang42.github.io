@@ -13,6 +13,8 @@ Over the past month, news headlines worldwide have been dominated by a single to
 
 This begs the question: How far is the Coronavirus actually spreading? In layman's terms, is it time to panic?
 
+&nbsp;
+
 ## Geographic Distribution
 
 To answer this question, I will use the [2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository](https://github.com/CSSEGISandData/COVID-19) operated by the Johns Hopkins University Center for Systems Science and Engineering. The repository contains data sets that list the number of confirmed cases, recoveries, and deaths from COVID-19. Each data set presents the data as a daily cumulative total for states and countries around the world.
@@ -69,11 +71,13 @@ As we can see, the graph for cases outside China looks much less extreme. In fac
 
 &nbsp;
 
-There's one last common question I've left relatively untouched so far: "Will I die if I contract COVID-19?". To answer this question, I plotted worldwide recoveries and deaths on the same plot.
+There's one last common concern I've left relatively untouched so far: "Will I die if I contract COVID-19?". To answer this question, I plotted worldwide recoveries and deaths on the same plot.
 
 ![COVID_4.5](/img/COVID_4.5.jpg){: .center-block :}
 
-From here, it should be easy to see that you are far more likely to recover than to die if you were to contract the virus. This is consistent with the 3% fatality rate that has been reported so far. Another factor to consider is the fact that many infected individuals experience mild symptoms or are asymptomatic. These individuals are less likely to be tested and don't experience severe enough symptoms to die from the disease. Thus, it's likely that the true fatality rate is even lower than the one calculated from current data. In short, there's no need for the average American to worry about dying from COVID-19.
+From here, it should be easy to see that you are far more likely to recover than to die if you were to contract the virus. This is consistent with the 3% fatality rate that has been reported so far. Another factor to consider is the fact that many infected individuals experience mild symptoms or are asymptomatic. These individuals are less likely to be tested and don't experience severe enough symptoms to die from the disease. Thus, it's likely that the true fatality rate is even lower than the one calculated from current data. In short, our data suggests that there's no need for the average American to worry about dying from COVID-19.
+
+&nbsp;
 
 ## Other Factors
 The above analysis and discussion is based only on the data sets provided. There are many factors that were not taken into consideration. These factors include:
