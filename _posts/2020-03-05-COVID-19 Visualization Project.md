@@ -4,7 +4,7 @@ title: COVID-19 Visualization
 subtitle: Is it time to panic yet?
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-bigimg: /img/COVID_2.jpg
+bigimg: /img/COVID_background.jpg
 tags: [Coronavirus,COVID-19]
 comments: true
 ---
