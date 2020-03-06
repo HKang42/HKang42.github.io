@@ -9,9 +9,9 @@ tags: [Coronavirus,COVID-19]
 comments: true
 ---
 
-Over the past month, news headlines worldwide have been dominated by a single topic, COVID-19. COVID-19 (colloquially called “the Coronavirus”) originated in mainland China where it infected tens of thousands over the course of several weeks. Since then it has spread abroad, appearing in countries like Iran, Italy, and The United States. The virus’ spread has stoked fear and panic around the world, leading many citizens of all countries to wonder if there’s a pandemic brewing in their own backyards. 
+Over the past month, news headlines worldwide have been dominated by a single topic, COVID-19. COVID-19 (colloquially called “the Coronavirus”) originated in mainland China where it infected tens of thousands over the course of several weeks. Since then, news coverage of the virus' progress has been constant. People around the world have been subjected to a media barrage of news about the potential dangers of a plague and about each new country COVID-19 has spread to. This has led many citizens of all countries to fear that there really is a pandemic brewing in their own backyards. Others have dismissed the news as overblown and exaggerated.
 
-This begs the question: How far has the Coronavirus actually spread? In layman's terms, is it time to panic?
+This begs the question: How far is the Coronavirus actually spreading? In layman's terms, is it time to panic?
 
 ## Geographic Distribution
 
@@ -65,7 +65,7 @@ Looking at the axis values, it's important to note that the total number of conf
 
 ![COVID_3](/img/COVID_3.jpg){: .center-block :}
 
-As we can see, the graph for cases outside China looks much less extreme. In fact, it looks like the beginning of the graph for China's cases. This is consistent with our statement earlier about the world graph mirroring China's with a time delay.
+As we can see, the graph for cases outside China looks much less extreme. In fact, it looks like the beginning of the graph for China's cases. This is consistent with our statement earlier about the world graph mirroring China's with a time delay. So to answer our question of how far the virus will actually spread, our graphs suggest that it will continue to spread for some time, but if we take proper safety measures it will eventually level off.
 
 &nbsp;
 
@@ -73,7 +73,7 @@ There's one last common question I've left relatively untouched so far: "Will I 
 
 ![COVID_4.5](/img/COVID_4.5.jpg){: .center-block :}
 
-From here, it should be easy to see that you are far more likely to recover than to die if you were to contract the virus. This is consistent with the 3% fatality rate that has been reported so far. Another factor to consider is the fact that many infected individuals experience mild symptoms or are asymptomatic. These individuals are less likely to be tested and don't experience severe enough symptoms to die from the disease. Thus, it's likely that the true fatality rate is even lower than the one calculated from current data.
+From here, it should be easy to see that you are far more likely to recover than to die if you were to contract the virus. This is consistent with the 3% fatality rate that has been reported so far. Another factor to consider is the fact that many infected individuals experience mild symptoms or are asymptomatic. These individuals are less likely to be tested and don't experience severe enough symptoms to die from the disease. Thus, it's likely that the true fatality rate is even lower than the one calculated from current data. In short, there's no need for the average American to worry about dying from COVID-19.
 
 ## Other Factors
 The above analysis and discussion is based only on the data sets provided. There are many factors that were not taken into consideration. These factors include:
