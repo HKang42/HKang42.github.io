@@ -71,8 +71,21 @@ There's one last common question I've left relatively untouched so far: "Will I 
 
 From here, it should be easy to see that you are far more likely to recover than to die if you were to contract the virus. This is consistent with the 3% fatality rate that has been reported so far. Another factor to consider is the fact that many infected individuals experience mild symptoms or are asymptomatic. These individuals are less likely to be tested and don't experience severe enough symptoms to die from the disease. Thus, it's likely that the true fatality rate is even lower than the one calculated from current data.
 
+## Other Factors
+The above analysis and discussion is based only on the data sets provided. There are many factors that were not taken into consideration. These factors include:
+
+- Reliance on testing kits and labs: Our confirmation data depends on the availability and usage of testing kits and labs.
+
+- Long incubation period: The available data covers only about 6 weeks. The incubation period of COVID-19 ranges from 1 day to 2 weeks. So there could be a large number of cases that haven't been detected yet.
 
 
+ - Mild or asymptomatic disease: Most individuals won't experience severe symptoms. This means that they are less likely to be tested which could mean there's a large number of cases that went unnoticed and unconfirmed. The flip side of this (as discussed previously) is that the fatality rate would be even lower than current calculations suggest.
+
+ - Demographics: Some demographics may be more prone to contracting the diseas and/or dyinf from it than others. This would be useful information to further specify who should worry about the virus.
+
+The above list is by no means an exhaustive list. But as you can see, there are so many considerations that it's hard to make any definitive conclusions at this time. So while the conclusions made in this post may be supported by some evidence, they should not be taken as fact or certainty.
+
+&nbsp;
 
 [Here's a link to the code I used to generate the plots](https://github.com/HKang42/DS-Unit-1-Build/blob/master/COVID_19_Project.ipynb)
 
