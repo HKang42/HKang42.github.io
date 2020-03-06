@@ -21,7 +21,7 @@ To answer this question, I used the [2019 Novel Coronavirus COVID-19 (2019-nCoV)
 
 Using this data I was able to create a geo-scatter plot to visualize the current geographic spread of COVID-19.
 
-![GeoScatter](/img/a1.png){: .center-block :}
+![GeoScatter](/img/COVID_1.png){: .center-block :}
 
 The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with grey. Countries without any confirmed cases are pale blue.
 
