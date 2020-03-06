@@ -23,7 +23,8 @@ The area for each bubble represents the total number of confirmed cases for a co
 
 As we can see, the vast majority of cases are still confined to mainland China. There are some notable bubbles in South Korea, Italy, and Iran. However, most other countries have cases that number only in the low hundreds or lower. But how many cases are we looking at exactly?
 
-<center>
+&nbsp;
+
 | Rank |     Region     | Confirmed Cases |
 |-----:|:--------------:|----------------:|
 |    1 | Mainland China |           80271 |
@@ -31,15 +32,17 @@ As we can see, the vast majority of cases are still confined to mainland China. 
 |    3 |      Italy     |            3089 |
 |    4 |      Iran      |            2922 |
 |    5 |     Others*    |             706 |
-</center>
+
  
- \*Others refers to the Diamond Princess Cruise ship.
+<font size="2"> \*Others refers to the Diamond Princess Cruise ship.</font>
+
+&nbsp;
 
 From the above table, we can see that China dwarfs everyone else as far as number of cases. There's a steep drop off as we go down the list. The U.S. is number 10 with only 153 cases as of this post. Based on the current number and distribution of COVID-19 cases, it appears that while the virus may pose an imminent threat, the average American is quite unlikely to wake up tomorrow and find himself diagnosed with COVID-19. So readers may rest assured that they don't need to panic yet. However, the above data is merely a snapshot in time and doesn't tell us much about the future. So what does the virus' progress look like over time?
 
 In order to answer that question, I plotted the cumulative total of confirmed cases, recoveries, and deaths both within mainland China and outside of China.
 
-## <center>Mainland China \t\t\t Outside China</center>
+ <center>Mainland China         Outside China</center>
 
 ![COVID_2](/img/COVID_2.jpg){: .center-block :}
 
