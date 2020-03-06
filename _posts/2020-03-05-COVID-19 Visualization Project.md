@@ -44,7 +44,7 @@ From the above table, we can see that China dwarfs everyone else as far as numbe
 
 In order to answer that question, I plotted the cumulative total of confirmed cases, recoveries, and deaths both within mainland China and outside of China.
 
- <center>Mainland China         Outside China</center>
+ <center>**Mainland China          Outside China**</center>
 
 ![COVID_2](/img/COVID_2.jpg){: .center-block :}
 
