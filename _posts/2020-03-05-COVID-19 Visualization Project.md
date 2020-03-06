@@ -29,10 +29,10 @@ As we can see, a large number of countries around the world have at least 1 conf
 
 | Rank |     Region     | Confirmed Cases |
 |-----:|:--------------:|----------------:|
-|    1 | Mainland China |           80271 |
-|    2 |   South Korea  |            5621 |
-|    3 |      Italy     |            3089 |
-|    4 |      Iran      |            2922 |
+|    1 | Mainland China |          80,271 |
+|    2 |   South Korea  |           5,621 |
+|    3 |      Italy     |           3,089 |
+|    4 |      Iran      |           2,922 |
 |    5 |     Others*    |             706 |
 
  
@@ -85,7 +85,7 @@ The above analysis and discussion is based only on the data sets provided. There
 
  - Mild or asymptomatic disease: Most individuals won't experience severe symptoms. This means that they are less likely to be tested which could mean there's a large number of cases that went unnoticed and unconfirmed. The flip side of this (as discussed previously) is that the fatality rate would be even lower than current calculations suggest.
 
- - Demographics: Some demographics may be more prone to contracting the diseas and/or dyinf from it than others. This would be useful information to further specify who should worry about the virus.
+ - Demographics: Some demographics may be more prone to contracting the disease and/or dying from it than others. This would be useful information to further specify who should worry about the virus.
 
 The above list is by no means an exhaustive list. But as you can see, there are so many considerations that it's hard to make any definitive conclusions at this time. So while the conclusions made in this post may be supported by some evidence, they should not be taken as fact or certainty.
 
