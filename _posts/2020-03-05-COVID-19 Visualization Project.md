@@ -11,7 +11,7 @@ comments: true
 
 Over the past month, news headlines worldwide have been dominated by a single topic, COVID-19. COVID-19 (colloquially called “the Coronavirus”) originated in mainland China where it infected tens of thousands over the course of several weeks. Since then it has spread abroad, appearing in countries like Iran, Italy, and The United States. The virus’ spread has stoked fear and panic around the world, leading many citizens of all countries to wonder if there’s a pandemic brewing in their own backyards. 
 
-This begs the question: how far has the Coronavirus actually spread? And does it pose a serious and immediate threat?
+This begs the question: How far has the Coronavirus actually spread? Moreover, is it time to panic?
 
 To answer this question, I will use the [2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository](https://github.com/CSSEGISandData/COVID-19) operated by the Johns Hopkins University Center for Systems Science and Engineering. The repository contains data sets that list the number of confirmed cases, recoveries, and deaths from COVID-19. Each data set presents the data as a daily cumulative total for states and countries around the world.
 
@@ -21,7 +21,7 @@ Using this data I was able to generate a geo-scatter plot to visualize the curre
 
 The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with dark grey. 
 
-As we can see, the vast majority of cases are still confined to mainland China. There are some notable bubbles in South Korea, Italy, and Iran. However, most other countries have cases that number only in the low hundreds or lower. But how many cases are we looking at exactly?
+As we can see, a large number of countries around the world have at least 1 confirmed case. However, the vast majority of cases are still confined to mainland China. There are some notable bubbles in South Korea, Italy, and Iran. But most other countries have cases that number in the low hundreds or lower. To give you an idea of the number's we're looking at, here are the top 5 regions with the highest number of confirmed cases.
 
 &nbsp;
 
@@ -38,7 +38,7 @@ As we can see, the vast majority of cases are still confined to mainland China. 
 
 &nbsp;
 
-From the above table, we can see that China dwarfs everyone else as far as number of cases. There's a steep drop off as we go down the list. The U.S. is number 10 with only 153 cases as of this post. Based on the current number and distribution of COVID-19 cases, it appears that while the virus may pose an imminent threat, the average American is quite unlikely to wake up tomorrow and find himself diagnosed with COVID-19. So readers may rest assured that they don't need to panic yet. However, the above data is merely a snapshot in time and doesn't tell us much about the future. So what does the virus' progress look like over time?
+From the above table, we can see that China dwarfs everyone else as far as number of cases. We can also see a steep drop off as we go down the list. The U.S. is number 10 with only 153 cases as of this post. And relative to a population of over 300 million, this number is incredibly small. Thus, while the virus may pose an imminent threat, the average American is quite unlikely to wake up tomorrow and find himself diagnosed with COVID-19. So readers may rest assured that they don't need to panic yet. However, the above data is merely a snapshot in time and doesn't tell us much about the past or future. So what does the virus' progress look like over time?
 
 &nbsp;
 
@@ -71,7 +71,7 @@ There's one last common question I've left relatively untouched so far: "Will I 
 
 From here, it should be easy to see that you are far more likely to recover than to die if you were to contract the virus. This is consistent with the 3% fatality rate that has been reported so far. Another factor to consider is the fact that many infected individuals experience mild symptoms or are asymptomatic. These individuals are less likely to be tested and don't experience severe enough symptoms to die from the disease. Thus, it's likely that the true fatality rate is even lower than the one calculated from current data.
 
-Notes and Caveats:
+
 
 
 [Here's a link to the code I used to generate the plots](https://github.com/HKang42/DS-Unit-1-Build/blob/master/COVID_19_Project.ipynb)
