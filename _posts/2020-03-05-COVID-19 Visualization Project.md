@@ -4,7 +4,8 @@ title: COVID-19 Visualization
 subtitle: Is it time to panic yet?
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-tags: [test]
+bigimg: https://www.cdc.gov/coronavirus/2019-ncov/images/home-banner.jpg
+tags: [Coronavirus,COVID-19]
 comments: true
 ---
 
@@ -16,7 +17,7 @@ To answer this question, I will use the [2019 Novel Coronavirus COVID-19 (2019-n
 
 Using this data I was able to generate a geo-scatter plot to visualize the current geographic spread of COVID-19.
 
-INSERT PLOT HERE
+[GeoScatter](/img/a1.png)
 
 The area for each bubble represents the total number of confirmed cases for a country. Any country with at least 1 case has been filled with dark grey.
 
