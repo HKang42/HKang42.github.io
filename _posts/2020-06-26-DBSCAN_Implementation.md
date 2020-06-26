@@ -57,15 +57,35 @@ To answer this question the 2 parameters are used, epsilon and a minimum number 
 
 Basically, DBSCAN looks at point density to determine whether or not to create and grow a cluster. Density has 2 components, the amount of stuff in a space and the size of the space.  Epsilon represents the size of the space. So a high epsilon means a low density requirement. The minimum point threshold represents the amount of stuff. A high threshold means a high density requirement.
 
-### Code
+### How effective is DBSCAN?
 
-Now that we understand how DBSCAN works, let's take a look at code fomr implementing it. This is code I wrote as a project for understanding and implementing DBSCAN on my own using only basic python and the numpy module.
+So how effective is DBSCAN? Let's see how it handles the same patterns we tested K-means on.
+
+![DBSCAN_Comparison](/img/DBSCAN_Figure_4.png){: .center-block :}
+
+As we can see, DBSCAN does a much better job of clustering many of the patterns. 
+
+Lastly, an important consideration that hasn't been explicitly mentioned are outliers or noise data. In contrast to the K-Means algorithm, the DBSCAN algorithm does NOT try to assign every data point a cluster. This means that noisy data or data with outliers can be easily handled by DBSCAN.
+
+&nbsp;
+
+### Basic Python Implementation
+
+Now that we understand how DBSCAN works, let's take a look at code for implementing it. This is code I wrote as a project for understanding and implementing DBSCAN on my own using only basic python and the numpy module.
+
+I create a DBSCAN class to act as an object for our model. This lets us store and access information like epsilon, minimum number of points, and the array of data points. Data point values and their cluster labels are stored within a Cluster object I wrote for this project. The object simply links an array of points to a list of their corresponding labels (i.e. the value and cluster label for any point can be accessed with the same index value). 
 
 <details>
   <summary>Create our DBSCAN model class</summary>
 
   ```python
+    import numpy as np
+    from Cluster_class import Cluster
+
     class DBSCAN():
+        """
+        Class object for storing our DBSCAN model. The cluster argument stores data points and cluster labels. The optional noise argument let's us specify the noise label.
+        """
         def __init__(self, epsilon=0.5, min_points=5, cluster = Cluster(), noise = -1):
             self.epsilon = epsilon
             self.min_points = min_points
@@ -75,7 +95,7 @@ Now that we understand how DBSCAN works, let's take a look at code fomr implemen
 </details>
 
 <details>
-  <summary>Function for calculating the distances between 1 point and the rest of an array</summary>
+  <summary>Helper function for calculating the distances between 1 point and the rest of an array</summary>
 
   ```python
         def get_distances(self, point, arr):
@@ -109,7 +129,7 @@ Now that we understand how DBSCAN works, let's take a look at code fomr implemen
 </details>
 
 <details>
-  <summary>Function for growing a cluster</summary>
+  <summary>Helper function for growing a cluster</summary>
 
   ```python  
         def create_cluster(self, point, arr, cluster, c):
@@ -153,7 +173,7 @@ Now that we understand how DBSCAN works, let's take a look at code fomr implemen
 
 
 <details>
-  <summary>Function for running DBSCAN on an array</summary>
+  <summary>Method for running DBSCAN on an array</summary>
   
   ```python
     def fit(self, arr):
@@ -192,28 +212,15 @@ Now that we understand how DBSCAN works, let's take a look at code fomr implemen
   ```
 </details>
 
-### How effective is DBSCAN?
 
-So how effective is DBSCAN? Let's see how it handles the same patterns we tested K-means on.
+### Verifying the Basic Implementation
 
-![DBSCAN_Comparison](/img/DBSCAN_Figure_4.png){: .center-block :}
+We can verify whether or not the above code is a functioning implementation of DBSCAN by comparing it to the SKlearn implementation. Scikit-learn (also known as sklearn) is a machine learning library commonly used by data scientists. 
 
-As we can see, DBSCAN does a much better job of clustering many of the patterns. 
+For the comparison, the same patterns from above are used. However, the number of samples has been heavily decreased (from 1,500 to 100) to make the data points less dense. This was done to force the creation of more clusters and better highlight differences between the implementations. 
 
-Lastly, an important consideration that hasn't been explicitly mentioned are outliers or noise data. In contrast to the K-Means algorithm, the DBSCAN algorithm does NOT try to assign every data point a cluster. This means that noisy data or data with outliers can be easily handled by DBSCAN
+In addition to visualizing the cluster results, the runtime for generating the model from the input data is displayed. 
 
-&nbsp;
+![Implementation_Comparison](/img/DBSCAN_Figure_5.png){: .center-block :}
 
-# Implementation considerations
-
-Now that you understand the algorithm, what's there to stop you from writing your own DBSCAN?
-
-Things are easy for small data sets. But efficiency becomes a very big problem for moderate and large data sets.
-
-
-# When to use
-NOISE
-
-be careful of high dimentionality or be prepared to combat the curse of dimentionality. Perhaps consider using non-euclidean distance measures 
-
-[Here's a link to the code I used to generate the plots](https://github.com/HKang42/DS-Unit-1-Build/blob/master/COVID_19_Project.ipynb)
+As we can see, even with the significantly less dense data, the clustering done by both algorithms is almost the same. Our basic implementation created 5 instead of 6 clusters for the concentric circles (first row) and 4 instead of 5 clusters for the half moons (second row). What is perhaps more significant is that the runtime for our basic implementation is significantly higher than sklearn's. Both of these differences are likely due to differences in the distance calculations. Optimizing our current code and utilizing additional search features like KD Trees and squared Euclidean Distances would likely reduce or remove the differences.
