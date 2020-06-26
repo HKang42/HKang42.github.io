@@ -4,7 +4,7 @@ title: DBSCAN Clustering.
 subtitle: What is it and how does it work?
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-bigimg: /img/COVID_background2.jpg
+bigimg: /img/bg_DBSCAN.png
 tags: [DBSCAN]
 comments: true
 ---
@@ -17,13 +17,13 @@ DBSCAN has been a popular clustering algorithm that has stood the test of time. 
 
 To understand the significance of DBSCAN, a solid grasp of clustering problems is required. Clustering refers to methods that look at data points and group them in some manner. A common and intuitive approach to this problem is to use centroid-based clustering. This algorthim can be easily understood with the figure below which depicts a popular clustering algorithm called "K-Means". At the basic level, centroid clustering works by guessing many groups the points fall into, and then letting a computer group points by minimizing the distance between each point and the center of its cluster (the centroid). 
 
-![GeoScatter](/img/COVID_1.png){: .center-block :}
+![KMeans_Example](/img/DBSCAN_Figure_1.png){: .center-block :}
 
 <font size="2"> *The above examples was taken from an article that provides an in-depth explanation of k-means centroid clustering https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a .</font>
 
 Unfortunately, methods like these have a few shortcomings. For example, what happens if you don't know how many clusters there should be? What happens if the points follow a pattern that can't be made using centroids? What about outliers that shouldn't be placed in a cluster? The figure below illustrates a few different patterns where K-means succeeds or fails to create good clusters.
 
-![GeoScatter](/img/COVID_1.png){: .center-block :}
+![KMeans_Patterns](/img/DBSCAN_Figure_2.png){: .center-block :}
 
 K-means fails with the concentric circle example (top row) because centroid clustering algorithms cannot handle patterns where clusters can't be linearly separated. There is no series of lines that can separate the two circles. This means we need a fundementally different approach if we want to cluster these types of patterns.  Enter DBSCAN.
 &nbsp;
@@ -49,7 +49,7 @@ Instead of using the distance between points and centroids, DBSCAN uses the dist
 
 So how effective is DBSCAN? Let's see how it handles the same patterns we test K-means on.
 
-![COVID_2](/img/COVID_2.jpg){: .center-block :}
+![DBSCAN_Comparison](/img/DBSCAN_Figure_4.jpg){: .center-block :}
 
 By using these basic steps, DBSCAN is able to handle non-linear boundaries between clusters. Of course, there's still one important consideration, what's the threshold for whether or not a point has enough neigbhors to be considered a cluster?
 
