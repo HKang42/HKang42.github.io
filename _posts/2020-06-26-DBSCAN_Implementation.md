@@ -57,13 +57,150 @@ To answer this question the 2 parameters are used, epsilon and a minimum number 
 
 Basically, DBSCAN looks at point density to determine whether or not to create and grow a cluster. Density has 2 components, the amount of stuff in a space and the size of the space.  Epsilon represents the size of the space. So a high epsilon means a low density requirement. The minimum point threshold represents the amount of stuff. A high threshold means a high density requirement.
 
-Lastly, an important consideration that hasn't been explicitly mentioned are outliers or noise data. In contrast to the K-Means algorithm, the DBSCAN algorithm does NOT try to assign every data point a cluster. This means that noisy data or data with outliers can be easily handled by DBSCAN
+### Code
+
+
+
+<details>
+  <summary>Create our DBSCAN model class</summary>
+
+    ```python
+    class DBSCAN():
+        def __init__(self, epsilon=0.5, min_points=5, cluster = Cluster(), noise = -1):
+            self.epsilon = epsilon
+            self.min_points = min_points
+            self.cluster = cluster
+            self.noise = noise
+    ```
+</details>
+
+<details>
+  <summary>Function for calculating the distances between 1 point and the rest of an array</summary>
+
+    ```python
+        def get_distances(self, point, arr):
+        """
+        Given a point and an n x m array, calculate the distance between that point and every other point in the array
+        Record the distances in a new n x 2 array. 
+        [n, 0] contains the distance value. 
+        [n, 1] is 1 if the distance is less or equal to epsilon (is a connection) and 0 otherwise.
+
+        Returns a tuple where the first entry is the array of distances and the second is the number of connections
+        """
+        # Create an empty array with the same number of rows as our input array.
+        # The first row entry will contain the distance between the input point and all other points.
+        # The second row entry is 0 if the point is not a neighbor or 1 if it is.
+        distances = np.zeros((len(arr), 2))
+        neighbors = 0
+
+        for i in range(len(arr)):
+
+            # calculate distance and store it in the array
+            dist = np.linalg.norm(point - arr[i])
+            distances[i, 0] = dist
+            
+            # Mark the point as a neighbor if it's within epsilon distance
+            if dist <= self.epsilon:
+                distances[i, 1] = 1
+                neighbors += 1
+
+        return distances, neighbors
+    ```
+</details>
+
+<details>
+  <summary>Function for growing a cluster</summary>
+
+    ```python
+        def create_cluster(self, point, arr, cluster, c):
+            """
+            Recursively grow a cluster given a starting point, an array, a max distances, and a minimum number of points.
+            Modifies the input cluster object by setting all points within the cluster to c.
+            """
+            distances, connections = self.get_distances(point, arr)
+
+            # Every time we call this function, we add the point to the cluster
+            cluster.set_label(point, c)
+
+            # Recursion base case, we have run out of connecting points (reach a terminating point/leaf)
+            if connections == 0:
+                return 
+
+            # If we are not at base case:
+            # Continue jumping to connecting points and labeling them c.
+            # Each time we jump, we shorten the input array by
+            # removing the connecting points from the input array.
+
+            # Filter the array down to only connecting points
+            # We use the fact that the indices for arr and distances correpsond to the same points
+            connecting_points = arr[ distances[:,1] == 1 ]
+
+            # We generate the new input array.
+            # This is the array of points minus the connecting points (includes the original point itself)
+            # We must subtract all connecting points instead of just the inpout point to prevent points from 
+            # connecting back and forth with each other
+            new_arr = arr[ distances[:,1] == 0 ]
+
+            # For each connecting point, we recursively call this method to expand the cluster
+            for p in connecting_points:
+                
+                self.create_cluster(p, new_arr, cluster, c)
+                
+            return None
+
+    ```
+</details>
+
+
+<details>
+  <summary>Function for running DBSCAN on an array</summary>
+  
+    ```python
+    def fit(self, arr):
+        """
+        Fit an array of data points on our DBSCAN object. Stores data points and assigns each point
+        a cluster label or noise label using the DBSCAN algorithm.
+        """
+
+        self.cluster = Cluster(arr)
+        Cluster_num = 1
+        
+        for i, point in enumerate(arr):
+            
+            # If the point has already been assigned a cluster or marked as noise, skip it
+            if self.cluster.labels[i] != 0:
+                continue
+
+            # Get the number of points that are considered connected (within epsilon distance).
+            _, connections = self.get_distances(point, arr)
+
+            # If number is less than the min_point threshold, we label it as noise.
+            if connections < self.min_points:
+                self.cluster.labels[i] = self.noise
+                continue
+            
+            # If number is greater than or equal to the threshold, we grow a cluster.
+            else: 
+                self.cluster.labels[i] = Cluster_num
+                Cluster_num += 1
+
+                # create cluster starting from the given point
+                self.create_cluster(point, arr, self.cluster, Cluster_num)
+        
+        return self
+
+    ```
+</details>
+
+### How effective is DBSCAN?
 
 So how effective is DBSCAN? Let's see how it handles the same patterns we tested K-means on.
 
 ![DBSCAN_Comparison](/img/DBSCAN_Figure_4.png){: .center-block :}
 
 As we can see, DBSCAN does a much better job of clustering many of the patterns. 
+
+Lastly, an important consideration that hasn't been explicitly mentioned are outliers or noise data. In contrast to the K-Means algorithm, the DBSCAN algorithm does NOT try to assign every data point a cluster. This means that noisy data or data with outliers can be easily handled by DBSCAN
 
 &nbsp;
 
