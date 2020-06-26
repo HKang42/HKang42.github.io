@@ -11,7 +11,7 @@ comments: true
 
 # What is clustering?
 
-DBSCAN has been a popular clustering algorithm that has stood the test of time. Introduced in 1996, its density-based approach to clustering has ensured its relevance as a solution for patterns that more traditional centroid approaches cannot cluster.
+Density-Based Spatial Clustering of Applications with Noise (DBSCAN) has been a popular clustering algorithm that has stood the test of time. Introduced in 1996, its density-based approach to clustering has ensured its relevance as a solution for patterns that more traditional centroid approaches cannot cluster.
 
 To understand the significance of DBSCAN, a solid grasp of clustering problems is required. Clustering refers to methods that look at data points and group them in some manner. A common and intuitive approach to this problem is to use centroid-based clustering. This algorthim can be easily understood with the figure below which depicts a popular clustering algorithm called "K-Means". At the basic level, centroid clustering works by guessing many groups the points fall into, and then letting a computer group points by minimizing the distance between each point and the center of its cluster (the centroid). 
 
@@ -241,3 +241,12 @@ However, this is not good when:
 &nbsp;
 
 All of my code for this project including the Cluster class and the code for generating plots can be found in my repository [here](https://github.com/HKang42/CS_DBSCAN_Implimentation).
+
+
+# References:
+
+- Background information on K-Means: https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a
+- Visualization of the DBSCAN Algorithm: https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/
+- Background information on DBSCAN: https://medium.com/@elutins/dbscan-what-is-it-when-to-use-it-how-to-use-it-8bd506293818
+- Comparison Plot of Various Clustering Algorithms: https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py
+- Scikit-learn's DBSCAN code: https://github.com/scikit-learn/scikit-learn/blob/fd237278e/sklearn/cluster/_dbscan.py#L150
