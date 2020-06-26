@@ -9,7 +9,7 @@ tags: [DBSCAN]
 comments: true
 ---
 
-# What is clustering?
+# What is Clustering?
 
 Density-Based Spatial Clustering of Applications with Noise (DBSCAN) has been a popular clustering algorithm that has stood the test of time. Introduced in 1996, its density-based approach to clustering has ensured its relevance as a solution for patterns that more traditional centroid approaches cannot cluster.
 
@@ -223,7 +223,7 @@ As we can see, even with the significantly less dense data, the clustering done 
 
 &nbsp;
 
-# When to use DBSCAN?
+# When to Use DBSCAN?
 
 Now that we understand what DBSCAN is and how to implement it, our final question is when to use DBSCAN. Recall that DBSCAN uses epsilon and a minimum point threshold to mark high density regions as clusters and low density regions as outliers. This is great when:
 
