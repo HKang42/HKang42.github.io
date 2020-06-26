@@ -41,7 +41,7 @@ Instead of using the distance between points and centroids, DBSCAN uses the dist
  
  - If they do have neighbors, then the cluster is expanded. 
   
- - Repeatedly grow the cluster until there are no more neighbors. 
+ - Repeatedly grow the cluster until the poimts do not have enough neighbors to grow the cluster. 
  
  - Then choose a different starting point and repeat the process.
 
@@ -223,4 +223,20 @@ In addition to visualizing the cluster results, the runtime for generating the m
 
 ![Implementation_Comparison](/img/DBSCAN_Figure_5.png){: .center-block :}
 
-As we can see, even with the significantly less dense data, the clustering done by both algorithms is almost the same. Our basic implementation created 5 instead of 6 clusters for the concentric circles (first row) and 4 instead of 5 clusters for the half moons (second row). What is perhaps more significant is that the runtime for our basic implementation is significantly higher than sklearn's. Both of these differences are likely due to differences in the distance calculations. Optimizing our current code and utilizing additional search features like KD Trees and squared Euclidean Distances would likely reduce or remove the differences.
+As we can see, even with the significantly less dense data, the clustering done by both algorithms is almost the same. Our basic implementation created 5 instead of 6 clusters for the concentric circles (first row) and 4 instead of 5 clusters for the half moons (second row). What is perhaps more significant is that the runtime for our basic implementation is significantly higher than sklearn's. Both of these differences are likely due to differences in the distance calculations. Optimizing our current code and utilizing additional search techniques like KD Trees or squared Euclidean Distances would likely reduce or remove the differences.
+
+
+# When to use DBSCAN?
+
+Now that we understand what DBSCAN is and how to implement it, our final question is when to use DBSCAN. Recall that DBSCAN uses epsilon and a minimum point threshold to mark high density regions as clusters and low density regions as outliers. This is great when:
+
+ - High and low density regions are what separates your data set. 
+ - You need to account for outliers. 
+ - You don't know the number of clusters.
+
+However, this is not good when:
+
+ - Adjacent clusters have similar density. If 2 clusters of similar density have a thin trail connecting them, DBSCAN will mark them as a single cluster.
+ - Cluster density vs. noise density is not consistent. Because epsilon and the minimum point threshold are fixed, DBSCAN cannot handle datasets where the difference between noise and cluster density changes. This problem is addressed by OPTICS, a similar algorithm developed by some of the creators of DBSCAN.
+ - The faster speed of alternatives like K-Means is needed.
+ - The required values for epsilon and minumim points can't be eaasily determined.
