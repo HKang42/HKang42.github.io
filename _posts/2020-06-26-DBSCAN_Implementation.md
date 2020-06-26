@@ -63,11 +63,7 @@ So how effective is DBSCAN? Let's see how it handles the same patterns we tested
 
 ![DBSCAN_Comparison](/img/DBSCAN_Figure_4.png){: .center-block :}
 
-As we can see, DBSCAN does a much better job of clustering many of the patterns. 
-
-Lastly, an important consideration that hasn't been explicitly mentioned are outliers or noise data. In contrast to the K-Means algorithm, the DBSCAN algorithm does NOT try to assign every data point a cluster. This means that noisy data or data with outliers can be easily handled by DBSCAN.
-
-&nbsp;
+As we can see, DBSCAN does a much better job of clustering many of the patterns. Not only did it correctly label the clusters separated by curved bounaries, but it also marked outliers as noise. 
 
 ### Basic Python Implementation
 
@@ -225,6 +221,7 @@ In addition to visualizing the cluster results, the runtime for generating the m
 
 As we can see, even with the significantly less dense data, the clustering done by both algorithms is almost the same. Our basic implementation created 5 instead of 6 clusters for the concentric circles (first row) and 4 instead of 5 clusters for the half moons (second row). What is perhaps more significant is that the runtime for our basic implementation is significantly higher than sklearn's. Both of these differences are likely due to differences in the distance calculations. Optimizing our current code and utilizing additional search techniques like KD Trees or squared Euclidean Distances would likely reduce or remove the differences.
 
+&nbsp;
 
 # When to use DBSCAN?
 
@@ -240,3 +237,7 @@ However, this is not good when:
  - Cluster density vs. noise density is not consistent. Because epsilon and the minimum point threshold are fixed, DBSCAN cannot handle datasets where the difference between noise and cluster density changes. This problem is addressed by OPTICS, a similar algorithm developed by some of the creators of DBSCAN.
  - The faster speed of alternatives like K-Means is needed.
  - The required values for epsilon and minumim points can't be eaasily determined.
+
+&nbsp;
+
+All of my code for this project including the Cluster class and the code for generating plots can be found in my repository [here](https://github.com/HKang42/CS_DBSCAN_Implimentation).
