@@ -19,13 +19,16 @@ To understand the significance of DBSCAN, a solid grasp of clustering problems i
 
 ![KMeans_Example](/img/DBSCAN_Figure_1.png){: .center-block :}
 
-<font size="2"> *The above examples was taken from an article that provides an in-depth explanation of k-means centroid clustering, [K-means Clustering: Algorithm, Applications, Evaluation Methods, and Drawbacks](https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a).</font>
+<font size="2"> *The above examples was taken from an article that provides an in-depth explanation of k-means centroid clustering, 
+ 
+ [K-means Clustering: Algorithm, Applications, Evaluation Methods, and Drawbacks](https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a) .</font>
 
 Unfortunately, methods like these have a few shortcomings. For example, what happens if you don't know how many clusters there should be? What happens if the points follow a pattern that can't be made using centroids? What about outliers that shouldn't be placed in a cluster? The figure below illustrates a few different patterns where K-means succeeds or fails to create good clusters.
 
 ![KMeans_Patterns](/img/DBSCAN_Figure_2.png){: .center-block :}
 
 K-means fails with the concentric circle example (top row) because centroid clustering algorithms cannot handle patterns where clusters can't be linearly separated. There is no series of lines that can separate the two circles. This means we need a fundementally different approach if we want to cluster these types of patterns.  Enter DBSCAN.
+
 &nbsp;
 
 ## The DBSCAN Algorithm
@@ -63,6 +66,7 @@ So how effective is DBSCAN? Let's see how it handles the same patterns we tested
 
 ![DBSCAN_Comparison](/img/DBSCAN_Figure_4.png){: .center-block :}
 
+&nbsp;
 
 ### Implementation considerations
 
