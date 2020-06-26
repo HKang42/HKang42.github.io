@@ -17,7 +17,7 @@ To understand the significance of DBSCAN, a solid grasp of clustering problems i
 
 ![KMeans_Example](/img/DBSCAN_Figure_1.png){: .center-block :}
 
-<font size="2"> *The above examples was taken from an article that provides an in-depth explanation of k-means centroid clustering. [K-means Clustering: Algorithm, Applications, Evaluation Methods, and Drawbacks](https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a).</font>
+<font size="2"> The above examples was taken from an article that provides an in-depth explanation of k-means centroid clustering. <a href="https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a">K-means Clustering: Algorithm, Applications, Evaluation Methods, and Drawbacks</a>.</font>
 
 Unfortunately, methods like these have a few shortcomings. For example, what happens if you don't know how many clusters there should be? What happens if the points follow a pattern that can't be made using centroids? What about outliers that shouldn't be placed in a cluster? The figure below illustrates a few different patterns where K-means succeeds or fails to create good clusters.
 
@@ -56,7 +56,6 @@ To answer this question the 2 parameters are used, epsilon and a minimum number 
 Basically, DBSCAN looks at point density to determine whether or not to create and grow a cluster. Density has 2 components, the amount of stuff in a space and the size of the space.  Epsilon represents the size of the space. So a high epsilon means a low density requirement. The minimum point threshold represents the amount of stuff. A high threshold means a high density requirement.
 
 Lastly, an important consideration that hasn't been explicitly mentioned are outliers or noise data. In contrast to the K-Means algorithm, the DBSCAN algorithm does NOT try to assign every data point a cluster. This means that noisy data or data with outliers can be easily handled by DBSCAN
-
 
 So how effective is DBSCAN? Let's see how it handles the same patterns we tested K-means on.
 
