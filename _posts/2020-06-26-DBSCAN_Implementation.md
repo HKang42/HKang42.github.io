@@ -59,28 +59,25 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
 
 ### Code
 
-
+Now that we understand how DBSCAN works, let's take a look at code fomr implementing it. This is code I wrote as a project for understanding and implementing DBSCAN on my own using only basic python and the numpy module.
 
 <details>
   <summary>Create our DBSCAN model class</summary>
 
-    ```
-    
+  ```python
     class DBSCAN():
         def __init__(self, epsilon=0.5, min_points=5, cluster = Cluster(), noise = -1):
             self.epsilon = epsilon
             self.min_points = min_points
             self.cluster = cluster
             self.noise = noise
-            
-    ```
+  ```
 </details>
 
 <details>
   <summary>Function for calculating the distances between 1 point and the rest of an array</summary>
 
-    ```python
-    
+  ```python
         def get_distances(self, point, arr):
         """
         Given a point and an n x m array, calculate the distance between that point and every other point in the array
@@ -108,15 +105,13 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
                 neighbors += 1
 
         return distances, neighbors
-        
-    ```
+  ```
 </details>
 
 <details>
   <summary>Function for growing a cluster</summary>
 
-    ```python
-    
+  ```python  
         def create_cluster(self, point, arr, cluster, c):
             """
             Recursively grow a cluster given a starting point, an array, a max distances, and a minimum number of points.
@@ -152,8 +147,7 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
                 self.create_cluster(p, new_arr, cluster, c)
                 
             return None
-
-    ```
+  ```
     
 </details>
 
@@ -161,7 +155,7 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
 <details>
   <summary>Function for running DBSCAN on an array</summary>
   
-    ```python
+  ```python
     def fit(self, arr):
         """
         Fit an array of data points on our DBSCAN object. Stores data points and assigns each point
@@ -195,7 +189,7 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
         
         return self
 
-    ```
+  ```
 </details>
 
 ### How effective is DBSCAN?
