@@ -51,7 +51,7 @@ Instead of using the distance between points and centroids, DBSCAN uses the dist
 
 Below is an image depicting the DBSCAN algorithm on a small data set with 1 cluster of points and 1 noise point. Notice that regardless of which point the cluster starts from, it will continually expand until it reaches points B and C. What do you think the circles represent?
 
-![DBSCAN_Algorithm](https://en.wikipedia.org/wiki/DBSCAN#/media/File:DBSCAN-Illustration.svg)
+![DBSCAN_Algorithm](/img/DBSCAN_Figure_3.png){: .center-block :}
 
 The steps outlined above contain almost everything you need to implement a DBSCAN algorithm. The final piece of information needed is to define what "many nearby points" means. In other words, what's the threshold for whether or not a point has enough neigbhors to be considered a cluster?
 
