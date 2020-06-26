@@ -4,12 +4,12 @@ title: DBSCAN Clustering
 subtitle: What is it and how does it work?
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-bigimg: [DBSCAN_bg.png]
+bigimg: /img/DBSCAN_bg.png
 tags: [DBSCAN]
 comments: true
 ---
 
-## What is clustering?
+# What is clustering?
 
 DBSCAN has been a popular clustering algorithm that has stood the test of time. Introduced in 1996, its density-based approach to clustering has ensured its relevance as a solution for patterns that more traditional centroid approaches cannot cluster.
 
@@ -23,13 +23,13 @@ Unfortunately, methods like these have a few shortcomings. For example, what hap
 
 ![KMeans_Patterns](/img/DBSCAN_Figure_2.png){: .center-block :}
 
-K-means fails with the concentric circle example (top row) because centroid clustering algorithms cannot handle patterns where clusters can't be linearly separated. There is no series of lines that can separate the two circles. This means we need a fundementally different approach if we want to cluster these types of patterns.  Enter DBSCAN.
+Why does K-means fail to cluster some of the patterns? Centroid clustering algorithms cannot handle patterns where clusters can't be linearly separated. For example, there is no series of lines that can separate two concentric circles. This means we need a fundementally different approach if we want to cluster these types of patterns.  Enter DBSCAN.
 
 &nbsp;
 
-## The DBSCAN Algorithm
+# The DBSCAN Algorithm
 
-Instead of using the distance between points and centroids, DBSCAN uses the distances between the points themselves. How does it work?  
+Instead of using the distance between points and centroids, DBSCAN uses the distances between the points themselves. The algorithm follows thesee general steps:
 
  - Pick an arbitrary starting point and looks for neighboring points. 
  
@@ -51,6 +51,8 @@ Below is an image depicting the DBSCAN algorithm on a small data set with 1 clus
 
 The steps outlined above contain almost everything you need to implement a DBSCAN algorithm. The final piece of information needed is to define what "many nearby points" means. In other words, what's the threshold for whether or not a point has enough neigbhors to be considered a cluster?
 
+### Epsilon and Minimum Number of Points
+
 To answer this question the 2 parameters are used, epsilon and a minimum number of points. Epsilon is the max distance 2 points can be away from each other. The higher the value, the more spread out points can be and still count as a cluster. Minimum number of points is simply the threshold for how many connections are needed for a point to grow a cluster. A higher value here means that points more neighbors to count as a cluster.
 
 Basically, DBSCAN looks at point density to determine whether or not to create and grow a cluster. Density has 2 components, the amount of stuff in a space and the size of the space.  Epsilon represents the size of the space. So a high epsilon means a low density requirement. The minimum point threshold represents the amount of stuff. A high threshold means a high density requirement.
@@ -61,16 +63,18 @@ So how effective is DBSCAN? Let's see how it handles the same patterns we tested
 
 ![DBSCAN_Comparison](/img/DBSCAN_Figure_4.png){: .center-block :}
 
+As we can see, DBSCAN does a much better job of clustering many of the patterns. 
+
 &nbsp;
 
-### Implementation considerations
+# Implementation considerations
 
 Now that you understand the algorithm, what's there to stop you from writing your own DBSCAN?
 
 Things are easy for small data sets. But efficiency becomes a very big problem for moderate and large data sets.
 
 
-### When to use
+# When to use
 NOISE
 
 be careful of high dimentionality or be prepared to combat the curse of dimentionality. Perhaps consider using non-euclidean distance measures 
