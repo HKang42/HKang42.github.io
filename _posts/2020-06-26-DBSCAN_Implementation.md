@@ -4,7 +4,7 @@ title: DBSCAN Clustering
 subtitle: What is it and how does it work?
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-bigimg: https://www.uclaextension.edu/sites/default/files/styles/certificate_hero/public/2018-06/data-science-fos-header.jpg?itok=g7dXCLdQ
+bigimg: [DBSCAN_bg.png]
 tags: [DBSCAN]
 comments: true
 ---
