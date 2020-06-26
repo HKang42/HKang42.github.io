@@ -64,13 +64,15 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
 <details>
   <summary>Create our DBSCAN model class</summary>
 
-    ```python
+    ```
+    
     class DBSCAN():
         def __init__(self, epsilon=0.5, min_points=5, cluster = Cluster(), noise = -1):
             self.epsilon = epsilon
             self.min_points = min_points
             self.cluster = cluster
             self.noise = noise
+            
     ```
 </details>
 
@@ -78,6 +80,7 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
   <summary>Function for calculating the distances between 1 point and the rest of an array</summary>
 
     ```python
+    
         def get_distances(self, point, arr):
         """
         Given a point and an n x m array, calculate the distance between that point and every other point in the array
@@ -105,6 +108,7 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
                 neighbors += 1
 
         return distances, neighbors
+        
     ```
 </details>
 
@@ -112,6 +116,7 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
   <summary>Function for growing a cluster</summary>
 
     ```python
+    
         def create_cluster(self, point, arr, cluster, c):
             """
             Recursively grow a cluster given a starting point, an array, a max distances, and a minimum number of points.
@@ -149,6 +154,7 @@ Basically, DBSCAN looks at point density to determine whether or not to create a
             return None
 
     ```
+    
 </details>
 
 
