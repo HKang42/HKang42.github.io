@@ -19,7 +19,7 @@ To understand the significance of DBSCAN, a solid grasp of clustering problems i
 
 ![KMeans_Example](/img/DBSCAN_Figure_1.png){: .center-block :}
 
-<font size="2"> *The above examples was taken from an article that provides an in-depth explanation of k-means centroid clustering https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a .</font>
+<font size="2"> *The above examples was taken from an article that provides an in-depth explanation of k-means centroid clustering, [K-means Clustering: Algorithm, Applications, Evaluation Methods, and Drawbacks](https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a).</font>
 
 Unfortunately, methods like these have a few shortcomings. For example, what happens if you don't know how many clusters there should be? What happens if the points follow a pattern that can't be made using centroids? What about outliers that shouldn't be placed in a cluster? The figure below illustrates a few different patterns where K-means succeeds or fails to create good clusters.
 
@@ -46,18 +46,23 @@ Instead of using the distance between points and centroids, DBSCAN uses the dist
  
  - Then choose a different starting point and repeat the process.
 
+Below is an image depicting the DBSCAN algorithm on a small data set with 1 cluster of points and 1 noise point. Notice that regardless of which point the cluster starts from, it will continually expand until it reaches points B and C. What do you think the circles represent?
 
-So how effective is DBSCAN? Let's see how it handles the same patterns we test K-means on.
+![DBSCAN_Algorithm](https://en.wikipedia.org/wiki/DBSCAN#/media/File:DBSCAN-Illustration.svg)
 
-![DBSCAN_Comparison](/img/DBSCAN_Figure_4.jpg){: .center-block :}
+The steps outlined above contain almost everything you need to implement a DBSCAN algorithm. The final piece of information needed is to define what "many nearby points" means. In other words, what's the threshold for whether or not a point has enough neigbhors to be considered a cluster?
 
-By using these basic steps, DBSCAN is able to handle non-linear boundaries between clusters. Of course, there's still one important consideration, what's the threshold for whether or not a point has enough neigbhors to be considered a cluster?
-
-To answer this, the user provides 2 parameters, epsilon and a minimum number of points. Epsilon is the max distance 2 points can be away from each other. The higher the value, the more spread out points can be and still count as a cluster. Minimum number of points is simply the threshold for how many connections are needed for a point to grow a cluster. A higher value here means that points more neighbors to count as a cluster.
+To answer this question the 2 parameters are used, epsilon and a minimum number of points. Epsilon is the max distance 2 points can be away from each other. The higher the value, the more spread out points can be and still count as a cluster. Minimum number of points is simply the threshold for how many connections are needed for a point to grow a cluster. A higher value here means that points more neighbors to count as a cluster.
 
 Basically, DBSCAN looks at point density to determine whether or not to create and grow a cluster. Density has 2 components, the amount of stuff in a space and the size of the space.  Epsilon represents the size of the space. So a high epsilon means a low density requirement. The minimum point threshold represents the amount of stuff. A high threshold means a high density requirement.
 
 Lastly, an important consideration that hasn't been explicitly mentioned are outliers or noise data. In contrast to the K-Means algorithm, the DBSCAN algorithm does NOT try to assign every data point a cluster. This means that noisy data or data with outliers can be easily handled by DBSCAN
+
+
+So how effective is DBSCAN? Let's see how it handles the same patterns we tested K-means on.
+
+![DBSCAN_Comparison](/img/DBSCAN_Figure_4.png){: .center-block :}
+
 
 ### Implementation considerations
 
