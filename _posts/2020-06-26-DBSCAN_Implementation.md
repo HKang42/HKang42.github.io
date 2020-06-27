@@ -13,10 +13,10 @@ comments: true
 <details>
   <summary>Create our DBSCAN model class</summary>
 
-  ```
+  ```python
     
-    import numpy as np
-    from Cluster_class import Cluster
+import numpy as np
+from Cluster_class import Cluster
 
     class DBSCAN():
         """
