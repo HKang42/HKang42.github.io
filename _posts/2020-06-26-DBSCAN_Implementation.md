@@ -9,6 +9,28 @@ tags: [DBSCAN]
 comments: true
 ---
 
+
+<details>
+  <summary>Create our DBSCAN model class</summary>
+
+  ```python
+  
+    import numpy as np
+    from Cluster_class import Cluster
+
+    class DBSCAN():
+        """
+        Class object for storing our DBSCAN model. The cluster argument stores data points and cluster labels. The optional noise argument let's us specify the noise label.
+        """
+        def __init__(self, epsilon=0.5, min_points=5, cluster = Cluster(), noise = -1):
+            self.epsilon = epsilon
+            self.min_points = min_points
+            self.cluster = cluster
+            self.noise = noise
+  ```
+  
+</details>
+
 # What is Clustering?
 
 Density-Based Spatial Clustering of Applications with Noise (DBSCAN) has been a popular clustering algorithm that has stood the test of time. Introduced in 1996, its density-based approach to clustering has ensured its relevance as a solution for patterns that more traditional centroid approaches cannot cluster.
