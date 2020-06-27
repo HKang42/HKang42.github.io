@@ -13,7 +13,7 @@ comments: true
 <details>
   <summary>Create our DBSCAN model class</summary>
 
-  ```python
+```python
     
 import numpy as np
 from Cluster_class import Cluster
@@ -28,7 +28,7 @@ from Cluster_class import Cluster
             self.cluster = cluster
             self.noise = noise
     
-  ```
+```
   
 </details>
 
