@@ -14,7 +14,7 @@ comments: true
   <summary>Create our DBSCAN model class</summary>
 
   ```python
-  
+    
     import numpy as np
     from Cluster_class import Cluster
 
@@ -27,6 +27,7 @@ comments: true
             self.min_points = min_points
             self.cluster = cluster
             self.noise = noise
+    
   ```
   
 </details>
